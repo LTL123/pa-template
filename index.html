@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wave-top">
+        <svg width="100%" height="110" viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,60 Q360,0 720,60 T1440,60 V110 H0 Z" fill="#64a8ff"/>
+        </svg>
+    </div>
+    <div class="wave-bottom">
+        <svg width="100%" height="110" viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,50 Q360,110 720,50 T1440,50 V0 H0 Z" fill="#64a8ff"/>
+        </svg>
+    </div>
+    <div class="container">
+        <img src="logo.png" alt="深圳明湾学校校徽" class="school-logo" style="width:110px;margin-bottom:10px;">
+        <div class="school-title">
+            <div class="school-cn">深圳明湾学校</div>
+            <div class="school-en">SHENZHEN MINGWAN SCHOOL</div>
+        </div>
+        <h1>Performance Assessment Plan</h1>
+        <form id="paForm">
+            <div class="form-group">
+                <label for="gradeSelect">Grade:</label>
+                <select id="gradeSelect" name="grade">
+                    <option value="">Select Grade</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5">Grade 5</option>
+                    <option value="6">Grade 6</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="unitName">Unit Name:</label>
+                <input type="text" id="unitName" name="unitName" placeholder="Enter unit name">
+            </div>
+
+            <div class="form-group">
+                <label for="learningObjectives">Learning Objective/Standards:</label>
+                <textarea id="learningObjectives" name="learningObjectives" placeholder="Enter learning objectives/standards"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="essentialQuestions">Essential Questions:</label>
+                <textarea id="essentialQuestions" name="essentialQuestions" placeholder="Enter essential questions"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="backgrounds">Backgrounds (Authentic Situation):</label>
+                <textarea id="backgrounds" name="backgrounds" placeholder="Enter backgrounds/authentic situation"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="paDescription">PA Description:</label>
+                <textarea id="paDescription" name="paDescription" placeholder="Enter PA description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="criteriaForSuccess">Criteria for Success:</label>
+                <textarea id="criteriaForSuccess" name="criteriaForSuccess" placeholder="Enter criteria for success"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="artifactsEvidence">Artifacts/Final Products/Evidence:</label>
+                <textarea id="artifactsEvidence" name="artifactsEvidence" placeholder="Enter artifacts, final products, or evidence"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="competencySelect">Competency:</label>
+                <select id="competencySelect" name="competency">
+                    <option value="">Select Competency</option>
+                    <option value="1">Competency #1: Cultural Fluency and Global Perspective</option>
+                    <option value="2">Competency #2: Critical Thinking and Innovation</option>
+                    <option value="3">Competency #3: Leadership and Collaboration</option>
+                    <option value="4">Competency #4: Emotional Resilience and Strength</option>
+                    <option value="5">Competency #5: Ethical Responsibility and Service</option>
+                    <option value="6">Competency #6: Communication and Expression</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="competencyIndicators">Competency Indicators:</label>
+                <div id="competencyIndicatorsContainer">
+                    <!-- Indicators will be populated here by JavaScript -->
+                    <p>Please select a competency to see indicators.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="rubricsDisplay">Rubrics for Selected Indicators:</label>
+                <div id="rubricsContainer" class="rubrics-display-box">
+                    <p>Select indicators to see their rubrics. (Rubrics will also be included in the PDF)</p>
+                </div>
+            </div>
+
+            <button type="button" id="downloadPdfButton">Download as PDF</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
