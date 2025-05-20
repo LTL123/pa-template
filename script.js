@@ -726,12 +726,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedGrade = document.getElementById('gradeSelect').value;
         
         if (selectedCheckboxes.length === 0) {
-            rubricsContainer.innerHTML = '<p>请选择指标以查看评分标准。</p>';
+            rubricsContainer.innerHTML = '<p>Please select indicator</p>';
             return;
         }
 
         if (!selectedGrade) {
-            rubricsContainer.innerHTML = '<p>请先选择年级以查看评分标准。</p>';
+            rubricsContainer.innerHTML = '<p>Please select Grade level first</p>';
             return;
         }
 
@@ -756,12 +756,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     li.appendChild(levelUl);
                 } else {
-                    li.innerHTML += '<span style="color: #777;">(该年级暂无评分标准)</span>';
+                    li.innerHTML += '<span style="color: #777;">(no rubric has been provided)</span>';
                 }
                 ul.appendChild(li);
             } else {
                 const li = document.createElement('li');
-                li.innerHTML = `<strong>${indicatorText}</strong>: <span style="color: #777;">(暂无评分标准)</span>`;
+                li.innerHTML = `<strong>${indicatorText}</strong>: <span style="color: #777;">(no rubric has been provided)</span>`;
                 ul.appendChild(li);
             }
         });
